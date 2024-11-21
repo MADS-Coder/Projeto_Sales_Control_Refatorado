@@ -1,0 +1,108 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #2c2931;
+    position: relative;
+    z-index: 1;
+}
+
+/*Menu das paginas*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: -webkit-sticky;
+    /* Necessário para funcionar no Safari */
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    list-style: none;
+    justify-items: center;
+    align-content: center;
+    background-color: #2c2931;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    padding: 20px 10px;
+}
+
+.menu ul li {
+    list-style: none;
+    margin: 0 15px 0 15px;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+}
+
+.menu li a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Submenu com transição suave */
+.menu li ul {
+    position: absolute;
+    top: 100%;
+    /* Submenu aparece abaixo do item pai */
+    left: 0;
+    background-color: #2c2931;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    /* Altura inicial 0 (oculto) */
+    overflow: hidden;
+    /* Esconde conteúdo que ultrapassa a altura */
+    transition: max-height 0.4s ease;
+    /* Animação suave na altura */
+    z-index: 10;
+    left: -50px;
+}
+
+.menu li ul li a {
+    padding: 10px 15px;
+    color: #fff;
+    white-space: nowrap;
+    /* Impede quebra de linha */
+}
+
+.menu ul li ul li:hover {
+    background-color: #666666;
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+    margin: 0;
+    background: linear-gradient(to bottom, #2c29312a, #666666);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu li:hover ul {
+    max-height: 500px;
+    /* Define uma altura suficiente para o conteúdo */
+}
+
+/*------Corpo do texto------*/
+.main {
+    padding: 50px 0;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    background-color: #eff0f1;
+    justify-items: center;
+    height: 100vh;
+}
+
+.content h1 {
+    margin-bottom: 30px;
+}
